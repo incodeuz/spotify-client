@@ -1,15 +1,14 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  padding: 84px 0 0 34px;
+  margin-left: 230px;
+  height: 100vh;
+  padding: 84px 0 93px 34px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 1) 75%,
-    rgba(136, 136, 136, 1) 100%
-  );
+  margin-bottom: 93px;
+  overflow-y: scroll;
 `;
 
 const Title = styled.div`
@@ -59,4 +58,32 @@ const SecondTitle = styled.div`
   margin-bottom: 20px;
 `;
 
-export { Container, Title, SecondTitle, HeaderBox, Box, Pretitle };
+const BigBox = styled.div`
+  width: 190px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  background-color: #181818;
+  margin: 10px;
+  border-radius: 4px;
+`;
+
+BigBox.Title = styled.div`
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-top: 22px;
+  margin-bottom: 3px;
+`;
+
+BigBox.Pretitle = styled.div`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #b3b3b3;
+`;
+
+export { Container, BigBox, Title, SecondTitle, HeaderBox, Box, Pretitle };

@@ -5,7 +5,7 @@ import { ReactComponent as LibraryIcon } from "../assets/library.svg";
 export const mockData = [
   {
     id: 1,
-    to: "/home",
+    to: "/",
     icon: <HomeIcon />,
     title: "Home",
   },

@@ -4,13 +4,14 @@ import { ReactComponent as CreatePlaylist } from "../../assets/playlist.svg";
 import { ReactComponent as LikedSongs } from "../../assets/liked.svg";
 import { ReactComponent as LikeIcon } from "../../assets/like.svg";
 import { ReactComponent as PipIcon } from "../../assets/library.svg";
-
 const Container = styled.div`
+  position: fixed;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 230px;
-  height: 100%;
+  height: calc(100% - 93px);
   background: #000000;
   padding: 20px 0 0 0;
   margin-bottom: 93px;

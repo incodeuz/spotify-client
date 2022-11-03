@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  BigBox,
   Box,
   Container,
   HeaderBox,
@@ -7,53 +8,46 @@ import {
   SecondTitle,
   Title,
 } from "./style";
-import Girl from "../../assets/girl.jpg";
+import { goodAfternoon, recentlyPlayed } from "../../utils/homeData";
 
 const Home = () => {
   return (
     <Container>
       <Title>Good afternoon</Title>
       <HeaderBox>
-        <Box>
-          <img src={Girl} alt="Devushkacha" width="84" />
-          <Pretitle>Pop Right Now</Pretitle>
-        </Box>
-        <Box>
-          <img src={Girl} alt="Devushkacha" width="84" />
-          <Pretitle>Pop Right Now</Pretitle>
-        </Box>
-        <Box>
-          <img src={Girl} alt="Devushkacha" width="84" />
-          <Pretitle>Pop Right Now</Pretitle>
-        </Box>
-        <Box>
-          <img src={Girl} alt="Devushkacha" width="84" />
-          <Pretitle>Pop Right Now</Pretitle>
-        </Box>
-        <Box>
-          <img src={Girl} alt="Devushkacha" width="84" />
-          <Pretitle>Pop Right Now</Pretitle>
-        </Box>
-        <Box>
-          <img src={Girl} alt="Devushkacha" width="84" />
-          <Pretitle>Pop Right Now</Pretitle>
-        </Box>
-        <Box>
-          <img src={Girl} alt="Devushkacha" width="84" />
-          <Pretitle>Pop Right Now</Pretitle>
-        </Box>
-        <Box>
-          <img src={Girl} alt="Devushkacha" width="84" />
-          <Pretitle>Pop Right Now</Pretitle>
-        </Box>
+        {goodAfternoon.map((value) => (
+          <Box key={value.id}>
+            <img
+              style={{
+                borderRadius: "4px",
+              }}
+              src={value.avatar}
+              alt=""
+              width="84"
+            />
+            <Pretitle>{value.title}</Pretitle>
+          </Box>
+        ))}
       </HeaderBox>
       <SecondTitle>Recently played</SecondTitle>
       <HeaderBox>
-        <Box></Box>
-        <Box></Box>
-        <Box></Box>
-        <Box></Box>
-        <Box></Box>
+        {recentlyPlayed.map((value) => (
+          <BigBox key={value.id} className="flex-direction">
+            <img src={value.icon} alt="" width="158" />
+            <BigBox.Title>{value.title}</BigBox.Title>
+            <BigBox.Pretitle>{value.pretitle}</BigBox.Pretitle>
+          </BigBox>
+        ))}
+      </HeaderBox>
+      <SecondTitle>Just the Hits</SecondTitle>
+      <HeaderBox>
+        {recentlyPlayed.map((value) => (
+          <BigBox key={value.id} className="flex-direction">
+            <img src={value.icon} alt="" width="158" />
+            <BigBox.Title>{value.title}</BigBox.Title>
+            <BigBox.Pretitle>{value.pretitle}</BigBox.Pretitle>
+          </BigBox>
+        ))}
       </HeaderBox>
     </Container>
   );

@@ -65,6 +65,8 @@ const Repeat = styled(Repeatcha)`
 `;
 
 const Container = styled.div`
+  position: fixed;
+  bottom: 0;
   padding: 0 15px;
   display: flex;
   align-items: center;
