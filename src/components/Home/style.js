@@ -66,6 +66,10 @@ const BigBox = styled.div`
   background-color: #181818;
   margin: 10px;
   border-radius: 4px;
+  :hover {
+    cursor: pointer;
+    background-color: #282828;
+  }
 `;
 
 BigBox.Title = styled.div`
