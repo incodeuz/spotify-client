@@ -44,7 +44,7 @@ TopWrapper.Title = styled.div`
 
 const Box = styled.div`
   margin: 0 21px 0 0;
-
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;

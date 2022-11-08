@@ -4,6 +4,7 @@ import Opahon from "../../assets/opahon.png";
 import Play from "../../assets/thumb_play.svg";
 import Heart from "../../assets/heart.svg";
 import MoreBig from "../../assets/more_big.svg";
+import { likedSongs } from "../../utils/likedSongs";
 
 const LikedSongs = () => {
   return (
@@ -32,6 +33,17 @@ const LikedSongs = () => {
           <TopWrapper.Pretitle flex>ALBUM</TopWrapper.Pretitle>
           <TopWrapper.Pretitle flex>DATE ADDED</TopWrapper.Pretitle>
         </Box>
+        {likedSongs.map((val) => {
+          return (
+            <Box>
+              <p>{val.title}</p>
+              <p>{val.pretitle}</p>
+              <img width="40" src={val.avatar} alt="" />
+              <p>{val.minute}</p>
+              <p>{val.date}</p>
+            </Box>
+          );
+        })}
       </div>
     </Container>
   );
