@@ -17,7 +17,7 @@ export const goodAfternoon = [
     id: 3,
     avatar: Girl,
     title: "Pop Right Now",
-  },
+  },    
   {
     id: 3,
     avatar: Girl,

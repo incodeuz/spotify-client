@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router";
 import Generic from "../components/Generic";
 import Home from "../components/Home";
 import HomePage from "../components/HomePage";
+import LikedSongs from "../components/LikedSongs";
 import NotFound from "../components/NotFound";
 
 const Root = () => {
@@ -13,7 +14,7 @@ const Root = () => {
         <Route path="/search" element={<Generic />} />
         <Route path="/library" element={<Generic />} />
         <Route path="/create-playlist" element={<Generic />} />
-        <Route path="/liked-songs" element={<Generic />} />
+        <Route path="/liked-songs" element={<LikedSongs />} />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
