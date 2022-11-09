@@ -115,4 +115,5 @@ Box.DataPretitle = styled.div`
 const BoxContent = styled.div`
   flex: ${({ flex }) => (flex ? "1" : "0")};
 `;
-export { Container, TopWrapper, Box, BoxContent };
+
+export { Container, TopWrapper, Box, BoxContent }; 
